@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Ray Image Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Chest X-Ray Image Prediction</h1>
+
+        <!-- Custom Load Image Button -->
+        <form action="/predict" method="post" enctype="multipart/form-data" id="upload-form">
+            <div class="upload-section">
+                <input type="file" name="file" id="file" class="inputfile" />
+                <label for="file" class="custom-file-upload"><i class="fas fa-upload"></i> Load Image</label>
+            </div>
+
+            <!-- Preview Image Section -->
+            <div class="preview-section">
+                <div id="image-preview">
+                    {% if image_url %}
+                        <img id="uploaded-image" src="{{ image_url }}" alt="Uploaded Image">
+                    {% else %}
+                        <img id="uploaded-image" src="#" alt="Uploaded Image" style="display:none;">
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Predict Button -->
+            <div class="button-section">
+                <button type="submit" class="predict-button"><i class="fas fa-play"></i> Predict</button>
+            </div>
+        </form>
+
+        <!-- Prediction Result Section -->
+        <div id="prediction-result">
+            {% if prediction %}
+                <p><strong>Prediction:</strong> {{ prediction }}</p>
+            {% else %}
+                <p class="default-text">X-ray image prediction seems very simple</p>
+            {% endif %}
+        </div>
+
+        <!-- Error Message Section -->
+        {% if error %}
+            <div id="error-message">
+                <p>{{ error }}</p>
+            </div>
+        {% endif %}
+
+        <!-- Recent Predictions Section -->
+        <div class="recent-predictions">
+            <h2>Recent Predictions</h2>
+            <div class="recent-images">
+                {% for image_url, prediction in recent_predictions %}
+                    <div class="recent-prediction">
+                        <img src="{{ image_url }}" alt="Recent X-Ray" class="recent-image">
+                        <p>{{ prediction }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("file").onchange = function(e) {
+            var reader = new FileReader();
+            reader.onload = function(){
+                var img = document.getElementById("uploaded-image");
+                img.src = reader.result;
+                img.style.display = "block";
+            };
+            reader.readAsDataURL(e.target.files[0]);
+        };
+    </script>
+</body>
+</html>

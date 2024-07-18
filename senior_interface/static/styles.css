@@ -1,0 +1,149 @@
+/* Your existing CSS */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/background.png'); /* Path to your background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Text color */
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* White background color with some transparency */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Border style with semi-transparent white color */
+    padding: 20px; /* Padding for better appearance */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth with semi-transparent black color */
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #28a745; /* Title color */
+    background-color: #fff; /* White background color */
+    padding: 10px; /* Padding for the title */
+    border-radius: 5px; /* Rounded corners for the title */
+}
+
+.inputfile {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: 2px solid #007bff; /* Button border */
+    padding: 8px 16px; /* Button padding */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3; /* Hover background color */
+}
+
+.preview-section {
+    margin-top: 20px;
+}
+
+#image-preview {
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Border style with semi-transparent white color */
+    padding: 10px; /* Padding around the image */
+    margin-bottom: 20px; /* Margin to separate from other elements */
+}
+
+#image-preview img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.button-section {
+    margin-top: 20px;
+}
+
+.predict-button {
+    background-color: #28a745; /* Button background color */
+    color: #fff; /* Button text color */
+    border: 2px solid #28a745; /* Button border */
+    padding: 8px 16px; /* Button padding */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.predict-button:hover {
+    background-color: #218838; /* Hover background color */
+}
+
+#prediction-result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #28a745; /* Prediction text color */
+    background-color: #fff; /* White background color */
+    padding: 10px; /* Padding for the prediction text */
+    border-radius: 5px; /* Rounded corners for the prediction text */
+}
+
+#error-message {
+    color: #dc3545;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.default-text {
+    color: rgba(255, 255, 255, 0.7); /* Default text color with semi-transparent white color */
+}
+
+/* Styles for recent predictions */
+.recent-predictions {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.recent-predictions h2 {
+    font-size: 24px;
+    color: #007bff; /* Recent predictions title color */
+    background-color: #fff; /* White background color */
+    padding: 10px; /* Padding for the title */
+    border-radius: 5px; /* Rounded corners for the title */
+    text-align: center;
+}
+
+.recent-predictions .recent-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recent-prediction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.recent-prediction img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.recent-prediction p {
+    font-size: 16px;
+    color: #000; /* Prediction text color */
+    background-color: #fff; /* White background color */
+    padding: 5px; /* Padding for the prediction text */
+    border-radius: 5px; /* Rounded corners for the prediction text */
+}
