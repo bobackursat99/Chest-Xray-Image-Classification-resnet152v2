@@ -1,4 +1,4 @@
-# Chest X-ray Classification
+# Classificaiton of Chest X-ray Images with Resnet152v2
 
 This project classifies chest X-ray images into four classes: COVID-19, pneumonia, lung opacity, and normal using a deep learning model (ResNet152v2) with transfer learning.
 
