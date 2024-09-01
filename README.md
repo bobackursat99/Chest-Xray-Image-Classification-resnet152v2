@@ -10,8 +10,8 @@ This is my senior project classifies chest X-ray images into four classes: COVID
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/chest-xray-classification.git
-    cd chest-xray-classification
+    git clone https://github.com/your-username/Chest-Xray-Image-Classification-resnet152v2 .git
+    cd Chest-Xray-Image-Classification-resnet152v2 
     ```
 
 2. **Install dependencies**:
