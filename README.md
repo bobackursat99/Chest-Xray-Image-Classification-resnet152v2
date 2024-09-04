@@ -36,8 +36,8 @@ Save the Trained Model:
 After training, the model will be saved as an .h5 file (e.g., model.h5) in the project directory.
 
 ## Run the application**:
-    ```
-    python app.py
+    ```bash
+       python app.py
     ```
 
 ## Usage
