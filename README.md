@@ -11,21 +11,21 @@ This is my senior project classifies chest X-ray images into four classes: COVID
 
 1. **Clone the repository**:
     ```git clone https://github.com/your-username/Chest-Xray-Image-Classification-resnet152v2.git
-cd Chest-Xray-Image-Classification-resnet152v2
+       cd Chest-Xray-Image-Classification-resnet152v2
     ```
 
 2. **Install dependencies**:
     ```bash
-    pip install -r requirements.txt
+       pip install -r requirements.txt
     ```
-3. **Model Training**
+## Model Training
 
-## Prepare Your Dataset:
+### Prepare Your Dataset:
 
 Organize your chest X-ray images into four folders named you wanted classify classes.
 Place these folders inside a main directory, e.g., dataset/.
 
-## Train the Model:
+### Train the Model:
 
 Open the train_model.ipynb Jupyter notebook.
 Update the dataset path in the notebook to point to your custom dataset.
